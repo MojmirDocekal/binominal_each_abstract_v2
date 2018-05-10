@@ -1,0 +1,215 @@
+% !TeX spellcheck = en_US
+\documentclass[12pt, a4paper]{scrartcl}
+
+%% Language and font encodings
+\usepackage[english]{babel}
+\usepackage{qtree}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{natbib}
+\setcitestyle{authoryear}
+\usepackage{stmaryrd}
+\usepackage{linguex}
+%\usepackage{times}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{fancyvrb}
+\newcommand{\cond}[1]{\textsc{#1}}
+\usepackage{hyperref}
+\usepackage{amssymb}
+\newcommand{\lb}{\llbracket}
+\newcommand{\rb}{\rrbracket}
+\newcommand{\sx}[1]{$\lb${#1}$\rb$}
+
+%% Sets page size and margins
+\usepackage[a4paper, margin=2.5cm]{geometry}
+
+\usepackage{wrapfig,lipsum,booktabs}
+\usepackage[usenames, dvipsnames]{color}
+
+\begin{document}
+
+\begin{center}
+\textbf{Czech binominal \textit{each} and collective set predicates}
+\end{center}
+
+In this paper we address a problem of collective numerals (CN) with determiner/binominal \textit{each} interaction. It was noticed in a literature (DOTLAČIL 2010) that some types of collectives allow limited distributivity effects like ability to license reciprocal anaphors (e.g. \textit{Bill and Peter, together, carried the piano across each other's lawns} from DOTLAČIL 2013). Such data are not analyzable in the traditional approaches to pluralities and require frameworks interpreting expressions via sets of assignments (BRASOVEANU, NOUWEN, DOTLAČIL a.o.). We follow this trend and describe Czech data (collective interpretation of numerals and determiner/binominal \textit{each}) in the PCDRT framework of DOTLAČIL 2011/2013. Binominal \textit{each} itself poses non-trivial questions for compositional approach to natural language syntax and semantics and its interaction with CN adds another layer of complexity. We argue that the essentially right PCDRT approach has to be enriched with syntactic analysis along the XXXX (RADKU?) to deal with the puzzling Czech data.
+
+\textbf{Data patterns:} Czech numerals have a distinctive subclass of the collective numerals (analyzed before in DOČEKAL \ldots) which ceteris paribus enforce collective inferences: see the contrast between \Next[a] and \Next[b] where the un-appropriateness continuation in \Next[b] signals unavailability of distributive readings with CN. \Next[b] has a collective inference: the two athletes worked together as a team. But even if the collective inference is a part of CN's meaning, they allow some limited distributive effects unlike pure collective nouns -- see the contrast between \NNext[a] and \NNext[b].
+
+\ex. \a. Dva sportovci vyhráli 3 medaile, $\checkmark$ první zlato a stříbro, druhý stříbro a bronz.\\
+Two athletes won 3 medals, first gold and silver, second silver and bronze.
+\b. Dvojice sportovců vyhrála 3 medaile, \#první zlato a stříbro, druhý stříbro\ldots\\
+Two-CN athletes won 3 medals, \#first gold and silver, second silver\ldots.
+
+\ex. \a. \#Skupina podezřelých zradila jeden druhého.\\
+\#Group of suspects betrayed each other.
+\b. Dvojice podezřelých zradila jeden druhého.\\
+Two-CN suspects betrayed each other.
+
+The crucial puzzling pattern we want to address with our analysis is presented in \Next: \Next[a] has the expected collective reading but determiner \textit{each} in \Next[b] allows distributive reading even with CN. But as \Next[c] shows such a distributive reading is unavailable with binominal \textit{each}. The grammaticality of \Next[b] is to some extent expected after \Last[b] but then un-acceptability of \Next[c] is surprising. Compare the perfectly grammatical \Next[d] with cardinal numeral substituting the CN. 
+
+\ex. \a. Dvojice sportovců vyhrála 3 medaile.\label{ex:dvojice-cum}\\
+two-CN won 3 medals.
+\b. Každý z dvojice atletů vyhrál 3 medaile.\label{ex:dvojice-det-each}\\
+Each from the two-CN won 3 medals.
+\c. \#Dvojice atletů vyhrála každý three medals.\label{ex:dvojice-bin-each}\\
+Two-CN athletes won each three medals.
+\d. Dva atleti vyhráli každý 3 medaile.\label{ex:dva-bin-each}\\
+Two athletes won each 3 medals.
+
+\textbf{Analysis:} we analyze the core data patterns introduced above using a mixture o PCDRT and an syntactic structure postulating an constituent headed by the Czech binominal \textit{each} and partially deleted under ellipsis. The easiest case, \ref{ex:dvojice-cum} is compositionally interpreted as follows: the root node S with 2 daughters DP$_1$ (semantics: \sx{DP$_1$}$=\lambda Q_{rt}.[u_1| \#(u_1)=2 \wedge \textsc{athletes}\{u_1\}] \wedge Q(\bigcup u_1)$) and VP$_1$ (semantics:
+ \sx{VP$_1$}$=\lambda v_r[u_2 | \#(u_2)=2 \wedge \textsc{medals}\{u_2\} \wedge \textsc{win}\{v,u_2\}]$) results in a meaning \NNext[a]. The only added addition (to standard numerical conditions of PCDRT) is the imposement of collective inference which stems from the quantifier denotation of CN where the collective set satisfaction is required in the nuclear scope -- VP$_1$'s first argument in this case. For \ref{ex:dvojice-det-each} we postulate the following ingredient: 'partitioning' meaning of the preposition \textit{z} 'from' (\sx{P}${}=\lambda P_{rt}\lambda v_r.[| v\subseteq P]$) which takes as its argument predicative meaning of CN (we follow the consensus in approaches to pluralities where collectivity/distributivity always targets the predicates, not the arguments) with collective inference targeting the CN itself ($\lambda w_r[|\#(w)=2 \wedge \textsc{athletes}\{\bigcup w\}]$). In this case the collectivity is decomposed via \sx{P} and the resulting set is an argument of standard determiner \textit{each} (DP$_1$ for \ref{ex:dvojice-det-each}: $\lambda Q_{rt}.[u_1|\delta_{u_1}(\lambda v_r.[v \subseteq \lambda w_r[|\#(w)=2 \wedge \textsc{athletes}\{\bigcup w\}]])] \wedge Q(u_1)$) which composes with the VP$_1$ identical to VP$_1$ discussed above into a clause meaning in \NNext[b]. The most complicated case is \ref{ex:dva-bin-each}: we assume the following syntactic structure in \Next where the NP$_3$ get elided and \textit{každý}, Czech binominal \textit{each} essentially contributes the meaning \sx{každý$^{u_m}$}=$\lambda v_r\lambda P_{rt}\lambda Q_{rt}.[u_m\mid] \wedge \delta_{v}(P(u_m)) \wedge Q(u_m)$: it combines with the meaning of NP$_3$ (the argument $\lambda v_r$). The meaning of NP$_3$ is anaphoric to the key (\sx{ten atlet}${}=u_1$ (such that $\textsc{athletes}\{u_1\}$)). In this respect Czech binominal \textit{each} differs from English \textit{each} described in DOTLAČIL: Czech binominal \textit{each} shows the inner syntactic complexity (its first argument is elided copy of key) and semantic composition (the core semantics is just $\delta$, the anaphoricity to key is decomposed in syntax). The resulting meaning is simply \sx{DP$_2$}$=\lambda Q_{rt}[u_2 | \wedge \delta_{u_1}([u_2| \#(u_2)=3 \wedge MEDAL(s)\{u_2\}] \wedge Q(u_2)$, the resulting meaning is \NNext[c]; the composition with the rest of the clause is un-problematic. Finally, let's explain the ungrammaticality of \ref{ex:dvojice-bin-each}: the key problem results from the incompatibility of S's two daughter nodes: CN being an argument requires collectivity in its nuclear scope -- \NNext[d-i] but binominal \textit{each} (VP$_1$ node in \NNext[d-ii]) dictates quantification over key's atoms, both requirements lead to a contradiction and ungrammaticality results.
+%-----------------
+%\begin{wrapfigure}{l}{0.37\linewidth}
+\newline
+
+\begin{minipage}{.45\textwidth}
+
+\noindent\ex. \Tree[.S [.DP$_1$ key ] [.VP$_1$ [.V won ] [.DP$_2$ [.{} [.Det každý:$\delta$ ]  [.NP$_3$ [.ten u$_1$ ] [.atlet ] ] ] [.NP$_2$ share  ]  ] ] ]
+
+\end{minipage}
+\begin{minipage}{.55\textwidth}
+
+\ex. \a. \sx{\ref{ex:dvojice-cum}}$=[u_1, u_2| \#(u_1)=2\wedge\textsc{athletes}\{u_1\} \wedge \#(u_2)=3 \wedge \textsc{medals}\{u_2\} \wedge{}$\\$\textsc{win}\{\bigcup u_1,u_2\}]$
+\b. \sx{\ref{ex:dvojice-det-each}}$=[u_1,u_2| \textsc{athlete}\{u1\} \wedge \delta_{u_1}(\lambda v_r.[v \subseteq \lambda w_r[|\#(w)=2 \wedge \textsc{athletes}\{\bigcup w\}] \wedge \#(u_2)=3 \wedge \textsc{medals}\{u_2\} \wedge \textsc{win}\{u_1, u_2\}])]$
+\c. \sx{\ref{ex:dva-bin-each}}$=[u_1,u_2|\#(u_1)=2 \wedge \textsc{athletes}\{u_1\} \wedge \delta_u_1([\#(u_2)=3 \wedge \textsc{medals}\{u_2\}])] \wedge \textsc{win}\{u_1,u_2\}$
+\d. \a. \sx{DP$_1$ of \ref{ex:dvojice-bin-each}}$=\lambda Q_{rt}.[u_1| \#(u_1)=2 \wedge \textsc{athletes}\{u_1\}] \wedge Q(\bigcup u_1)$
+\b. $\lambda v_r[u_2 | \delta_u_1([\#(u_2)=3 \wedge \textsc{medals}\{u_2\}]) \wedge \textsc{win}\{v,u_2\}]$
+\z.
+
+\end{minipage}
+%\end{wrapfigure}
+
+\newline
+\scriptsize
+\noindent\textbf{Selected references:} Dotlačil, J. (2011). Fastidious distributivity. In \textit{Semantics and Linguistic Theory} (Vol. 21, pp. 313-332); Dotlačil, J. (2012). Binominal each as an anaphoric determiner: Compositional analysis. In \textit{Sinn und Bedeutung} (Vol. 16, pp. 211-224).
+
+\newpage
+\normalsize
+
+\textbf{Analysis:} basic ingredients of PCDRT we need are the following: expressions are interpreted relative to sets of assignments (plural information states). In this framework binominal and determiner \textit{each} introduce a distributive operator $\delta$ in \Next[a] (after DOTLAČIL) which filters-out all assignments with non-atomic denotation (the part $\mid \bigcup u_nI\mid = 1$). Binominal \textit{each} in \Next[b] (after DOTLAČIL) distributes over atoms in key's denotation (it is anaphoric to key) and it requires that the share denotation has the right cardinality for each atom in the key.
+
+\begin{wraptable}{l}{0.37\linewidth}
+\begin{tabular}{|c|c|c|}
+\hline 
+Info state J & u$_1$ & u$_2$ \\ 
+\hline 
+j$_1$ & athlete$_1$ & medal$_1$ \\ 
+\hline 
+j$_2$ & athlete$_1$ & medal$_2$ \\ 
+\hline 
+j$_3$ & athlete$_1$ & medal$_3$ \\ 
+\hline 
+j$_4$ & athlete$_2$ & medal$_4$ \\ 
+\hline 
+j$_5$ & athlete$_2$ & medal$_5$ \\ 
+\hline 
+j$_6$ & athlete$_2$ & medal$_6$ \\ 
+\hline 
+\end{tabular} 
+\caption{Figure 1: distributive info states for \ref{ex:dvojice-det-each}}
+\end{wraptable}
+%------------------------------------------
+The determiner \textit{each} in \Next[c] doesn't introduce a new discourse referent (dref) like the binominal \textit{each} but it requires all the drefs satisfying restrictor to satisfy its scope one by one. In other words: beside anaphoricity there is no difference between binominal and distributive \textit{each} (expected as they are both one lexical item). As for CN, we formalize their collective inference as the imposement on the predicate of the sentence to be satisfied in all assignments of a dref u$_n$ ($\bigcup u_n$). The formalization of \ref{ex:dvojice-cum} is in \NNext[a]: it is a cumulative reading which impose (collective set) satisfaction of the predicate \textit{WIN} (on its first argument) to all assignments of u$_1$. The numerical cardinality is the same as in standard PCDRT condition on numerals, the only distinction is the collective inference formalized as $WIN\{\bigcup u_1,u_2\}$. Formalization of \ref{ex:dvojice-det-each} is in \NNext[b]: the distributive interpretation is grammatical as the CN isn't argument of the verb but is a restrictor of the determiner \textit{each}, so there is no problem with the collective entailment imposed on the verb -- one verifying info state for \ref{ex:dvojice-det-each} is in the Figure 1. Lastly \NNext[c] formalizes the sentence \ref{ex:dvojice-bin-each} and explains its ungrammaticality: the crucial problem here is that the CN is part of the argument NP which is the subject of the verb, so it enforces the collective set interpretation in the subject verbal argument ($\bigcup u_1$) which of course clashes with the semantics of $\delta$ requiring each atom of the key to satisfy the scope. 
+%------------------------------------------
+
+\ex. \a. $\delta_{u_n}(D):=\lambda I_{st}\lambda J_{st}.u_nI=u_nJ \wedge \forall d \in u_nI(\mid \bigcup u_nI\mid = 1 \wedge D(I\mid u_{n=d})(J\mid u_{n=d}))$
+\b. $\lb each^{u_m}_{u_n}\rb=\lambda P_{rt}\lambda Q_{rt}.[u_m\mid] \wedge \delta_{u_n}(P(u_m)) \wedge Q(u_m)$
+\c. $\lb each^{u_n}\rb=\lambda P_{rt}\lambda Q_{rt}.\delta_{u_n}(P(u_m)) \wedge Q(u_m)$
+
+\ex. \a. $[u_1, u_2\mid 2 ATOMS\{\bigcup u_1\} \wedge ATHLETE(s)\{u_1\} \wedge 3 ATOMS\{\bigcup u_2\} \wedge MEDAL(s)\{u_2\} \wedge WIN\{\bigcup u_1,u_2\}]$
+\b. $([\mid ATHLETE(s)\{u_1\} \wedge 2 ATOMS\{\bigcup u_1\}] \wedge \delta_{u_1} ([\mid ATOM \{\bigcup u_1\}] \wedge [\mid 3 ATOMS\{\bigcup u_2\} \wedge MEDAL(s)\{u_2\}] \wedge [\mid WIN\{u_1,u_2\}]$
+\c. $([\mid ATHLETE(s)\{u_1\} \wedge 2 ATOMS\{\bigcup u_1\}] \wedge \delta_{u_1} ([\mid ATOM \{\bigcup u_1\}] \wedge [\mid 3 ATOMS\{\bigcup u_2\} \wedge MEDAL(s)\{u_2\}] \wedge [\mid WIN\{\bigcup u_1,u_2\}]$
+
+\textbf{Syntax:} anaphoricity in \ref{ex:dva-bin-each}: agreement in case and gender but sg instead of pl number of its anaphoric key.
+
+
+% Radek:
+
+\ex. Ty slepice snesly každá tři vejce.\\
+\Tree [.VP \qroof{ty slepice}.NP$_1$ [.{} $i$ [.VP snesly [.NP$_2$ [.NP$_3$ [.Det každá ] [.NP$_4$ [.Dem ta $i$ ] \qroof{slepice}.NP$_5$ ] ] \qroof{tři vejce}.NP$_6$ ] ] ] ] \medskip
+
+We assume that demonstratives subcategorize for a silent index (Elbourne 2008, Schwarz 2009, a.o.) which can be bound by a c-commanding expression (here: the subject NP \textit{ty slepice}). The reference of this index is then equated with the denotation of the NP-argument of the demonstrative. We assume here for simplicity that the final value of the demonstrative is simply a referent and that the demonstrative contributes no uniqueness (it merely contributes anaphoricity, no uniqueness/maximality; cf. Šimík 2016 for an argument from Czech demonstratives). The NP simply contributes a free variable, restricted by its descriptive content (Heim 1982). The relation $<$ (part of) is contextually supplied (and could be reformulated to become compatible with Jakub's account; if I'm not mistaken, he doesn't assume a mereological analysis of sg vs. pl, or does he?). For independent motivation for contextual determination (and the associated flexibility) of the relation between the NP-denotation and its antecedent in demonstrative NPs, see Šimík 2016.
+
+\ex. \a. \sx{ta}${}=\lambda x\lambda v[v : v < x]$\hfill $<$ is a contextually supplied relation\medskip
+\b. \sx{Dem}$^g=\lambda v[v : v < g(i)]$\hfill $g(i) ={}$\sx{NP$_1$}\medskip
+\b. \sx{NP$_5$}${}= u_m : \textsc{hen}(u_m)$\medskip
+\b. \sx{NP$_4$}$^g = u_m : \textsc{hen}(u_m)\wedge u_m < g(i)$\medskip
+\b. \sx{Det}${}=\lambda v\lambda P\lambda Q[\delta (P(v))\wedge 	Q(v)]$
+
+\Tree[.VP [.rt,t [.EC ] [.{dva sportovci} ]] [.rt [.každý ] [.rt [.vyhráli ] [.rt,t [.EC ] [.{3 medaile} ] ] ]] ]
+
+\newpage
+
+\ex. Dvojice sportovců vyhrála 3 medaile.
+
+\Tree[.S [.{} \qroof{EC$^{u_1}$ two-ice sportovců}.DP$_1$ ] [.VP$_1$ [.V won ] [.{} \qroof{EC$^{u_2}$ 3 medals }.DP$_2$ ] ] ]
+
+\ex. \a. \sx{S}$=[u_1, u_2| \#(u_1)=2\wedge\textsc{athletes}\{u_1\} \wedge \#(u_2)=3 \wedge \textsc{medals}\{u_2\} \wedge{}$\\$\textsc{win}\{\bigcup u_1,u_2\}]$
+\b. \sx{DP$_1$}$=\lambda Q_{rt}.[u_1| \#(u_1)=2 \wedge \textsc{athletes}\{u_1\}] \wedge Q(\bigcup u_1)$
+\c. \sx{VP$_1$}$=\lambda v_r[u_2 | \#(u_2)=2 \wedge \textsc{medals}\{u_2\} \wedge \textsc{win}\{v,u_2\}]$
+\d. \sx{DP$_2$}$=\lambda Q_{rt}.[u_2| \#(u_2)=3 \wedge \textsc{medals}\{u_2\}] \wedge Q(u_2)$
+
+\ex. Každý z dvojice atletů vyhrál 3 medaile.
+
+\Tree[.S [.DP$_1$ [.každý ] [.PP [.P z ] [.NP$_1$ ] ] ] [.VP$_1$ ] ]
+
+\ex. \a. \sx{NP$_1$}$=\lambda w_r[|\#(w)=2 \wedge ATHLETE(s) \{w\}]$
+% * <radek.simik@hu-berlin.de> 2018-05-07T09:52:06.166Z:
+% 
+% > $=\lambda w_r[|\#(w)=2 \wedge ATHLETE(s) \{w\}]$
+% Tato semantika je tedy identicka jako kdyby to byli "dva atleti"?
+% 
+% ^.
+\b. \sx{P}$=\lambda P_{rt}\lambda v_r.[| v \subseteq P(\bigcup v)]$
+% * <radek.simik@hu-berlin.de> 2018-05-07T09:48:51.691Z:
+% 
+% > $=\lambda P_{rt}\lambda v_r.[| v \subseteq P(\bigcup v)]$
+% Obavam se ze tady to nevychazi typove: Kdyz uz, tak bysme asi museli psat {v}, protoze v neni set (nebo se mylim?). Druhy, vetsi problem je, ze P(Uv) je klasickeho typu t a tim padem v (popr. {v}) nemuze byt jeho subset...
+% 
+% ^.
+\c. \sx{PP}$=\lambda v_r.[| v \subseteq \lambda w_r[|\#(w)=2 \wedge ATHLETE(s) \{w\})(\bigcup v)]$
+\d. \sx{každý$^{u_n}$}$=\lambda P_{rt}\lambda Q_{rt}.[u_n\mid] \wedge \delta_{u_n}(P(u_m)) \wedge Q(u_m)$
+% * <radek.simik@hu-berlin.de> 2018-05-07T10:13:49.683Z:
+% 
+% > \sx{každý$^{u_n}$}$=\lambda P_{rt}\lambda Q_{rt}.[u_n\mid] \wedge \delta_{u_n}(P(u_m)) \wedge Q(u_m)$
+% Tady u toho kazdy mas nevazanou promennou u_m. Nejsem si ted jaksi jisty, co to ma znamenat, resp. jak to opravit.
+% 
+% ^.
+\e. \sx{DP$_1$}$=\lambda Q_{rt}.[u_1\mid \wedge \delta_{u_1}(\lambda v_r.[| v \subseteq \lambda w_r[|\#(w)=2 \wedge ATHLETE(s) \{w\})(\bigcup v)](u_1))] \wedge Q(u_m)$
+\newpage
+
+% * <radek.simik@hu-berlin.de> 2018-05-07T10:05:26.683Z:
+% 
+% Nize pokus o korekci tveho (11b/c) - (a). Fungovat by to melo v pripade, ze zachovame [[dvojice studentu]] = [[dva studenti]], jak to ted podle me mas. Pokud [[dvojice studentu]] bude mit v sobe podminku, ze ma v extenzi jenom skupiny, pak by nam toto P nepomohlo. Museli bychom definovat operator, ktery ze skupiny vytahne jeji cleny (rekneme UNGROUP). Pak by bylo jako v (b) nize.
+% 
+% ^.
+
+Tady navrh na korekci vyznamu P, viz koment vyse.
+
+\ex.[(I)] \a. \sx{P}${}=\lambda P_{rt}\lambda v_r.[| v\subseteq P]$
+\b. \sx{P}${}=\lambda P_{rt}\lambda v_r.[| \textsc{ungroup}(P)(v)]$
+
+\ex. Dva atleti vyhráli každý 3 medaile.
+
+\Tree[.S [.DP$_1$ ] [.VP [.V won ] [.DP$_2$ [.{} [.Det každý:$\delta$ ]  [.NP$_3$ [.ten u$_1$ ] [.atlet ] ] ] [.NP$_2$  ]  ] ] ]
+
+\ex. \a. \sx{každý$^{u_m}_{u_n}$}=$\lambda P_{rt}\lambda Q_{rt}.[u_m\mid] \wedge \delta_{u_n}(P(u_m)) \wedge Q(u_m)$
+\b. \sx{DP$_2$}$=\lambda Q_{rt}[u_2 | \wedge \delta_{u_1}([u_2| \#(u_2)=3 \wedge MEDAL(s)\{u_2\}] \wedge Q(u_2)$
+
+Tady pokus o formulaci toho kompletnejsiho ceskeho each a semantiky \textit{ten atlet} (ackoliv tam nevim, jestli to uvozuje jen toho referenta,  nebo cely informacni stav). Vyznam atlet je proste pridany jako podminka na hodnotu toho referenta (in line with Heim 1982). Da se to prip. udelat i cele kompozicne (jak jsem uz nacrtnul vyse, v (7)).
+
+\ex.[(II)] \a. \sx{každý$^{u_m}$}=$\lambda v_r\lambda P_{rt}\lambda Q_{rt}.[u_m\mid] \wedge \delta_{v}(P(u_m)) \wedge Q(u_m)$
+\b. \sx{ten atlet}${}=u_1$ (such that $\textsc{athletes}\{u_1\}$)
+
+
+\ex. \#Dvojice atletů vyhrála každý 3 medaile.
+
+\Tree[.S [.DP$_1$ ] [.VP [.V won ] [.DP2 [.{} [.Det každý:$\delta$ ]  [.NP$_3$ [.ten u$_1$ ] [.atlet ] ] ] ] ] ]
+
+\ex. \a.\sx{DP$_1$}$=\lambda Q_{rt}.[u_1| \#(u_1)=2 \wedge ATHLETE(s)\{u_1\}] \wedge Q(\bigcup u_1)$
+\b. \sx{VP$_1$}$=\lambda v_r[u_2 | \wedge \delta_{u_1}([u_2| \#(u_2)=3 \wedge MEDAL(s)\{u_2\}]$
+
+\end{document}
+
